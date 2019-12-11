@@ -3,7 +3,9 @@
 @section('content')
 
 @if (session('oauth_error'))
-    {{ session('oauth_error') }}
+    <div class="alert alert-danger text-center">
+        {{ session('oauth_error') }}
+    </div>
 @endif
 
 <div class="container">
