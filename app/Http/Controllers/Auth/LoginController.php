@@ -55,7 +55,10 @@ class LoginController extends Controller
             return redirect('/login')->with('oauth_error', '予期せぬエラーが発生しました');
         }
 
+        // $emailがnullならfalse
         if ($email = $providerUser->getEmail()) {
+
+            // email(第一引数)がすでにDBに登録されていなかった場合、name(第二引数)を追加して返す
             Auth::login(User::firstOrCreate([
                 'email' => $email
             ], [
