@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="mt-5 text-center">
-                            <a href="{{ url('login/twitter') }}">ツイッターでログイン</a>
+                            <a href="{{ url('login/twitter') }}">ツイッターでログインする</a>
                         </div>
                     </form>
                 </div>
