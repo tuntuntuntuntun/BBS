@@ -58,7 +58,7 @@ class LoginController extends Controller
         // $emailがnullならfalse
         if ($email = $providerUser->getEmail()) {
 
-            // email(第一引数)がすでにDBに登録されていなかった場合、name(第二引数)を追加して返す
+            // email(第一引数)がDBに登録されていなかった場合、name(第二引数)をBDに追加
             Auth::login(User::firstOrCreate([
                 'email' => $email
             ], [
